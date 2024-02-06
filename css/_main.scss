@@ -1,0 +1,275 @@
+.modern-container {
+    width: 100%;
+    margin: 0 auto 6em auto;
+    .hero-container {
+        display: block;
+        margin-bottom: 2em;
+        .hero-mobile {
+            height: 100%;
+            width: 100%;
+        }
+        .hero-tablet, .hero-desktop {
+            display: none;
+        }
+        .logo-light {
+            display: none;
+        }
+    }
+    .black-bg {
+            display: none;
+    }
+    .modern-content {
+        margin-left: 1em;
+        margin-right: 1em;   
+        .logo-dark {
+            margin-bottom: 2em;
+            img {
+            width: 80%;
+            }
+        }
+        p {
+            margin-bottom: 1em;
+        }
+    }
+    // TABLET TABLET TABLET view modern art 'hero' part of the website
+    @include breakpoint-up('large') {
+        .hero-container {
+            max-width: 60%;
+            .hero-mobile, .hero-desktop {
+                display: none;
+            }
+            .hero-tablet {
+                display: block;
+                position: relative;
+            }
+        }
+        .modern-content {
+            position: absolute;
+            top: 10em;
+            left: 23.5em;
+            width: 400px;
+            .logo-dark {
+                margin-bottom: 2.5em;
+            }
+            p {
+                margin-bottom: 2.5em;
+            }
+        }
+    }
+    // STICK THE CONTENT TO THE HERE IMG??????
+    // DESKTOP DESKTOP DESKTOP view modert art 'hero'part of the website using grid
+    @include breakpoint-up('xlarge') {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            'black-bg hero-container';
+        position: relative;
+        .hero-container{
+            position: relative;
+            .hero-tablet {
+                display: none;
+            }
+            .hero-desktop {
+                display: block;
+            }
+            .logo-light {
+                display: block;
+                position: absolute;
+                top: 12em;
+                width: 400px;
+                left: -13.8em;
+                z-index: 100;
+            }
+            .modern-content {
+                position: absolute;
+                top: 12em;
+                left: 30em;
+                .logo-dark {
+                    display: none;
+                }
+            }
+        }
+            .black-bg {
+                display: block;
+                height: 800px;
+                background-color: $black;            
+            }
+    }
+}
+
+.day-container {
+    // background-color: cadetblue;
+    // width: 100%;
+    // margin: 0 auto 2em auto;
+    // border: 2px solid red;
+    .day-img {
+        display: block;
+        height: 100%;
+        width: 90%;
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+        // border: 2px solid green;
+        margin-bottom: 2em;
+        // padding-left: 2em;
+    }
+    .day-content-container {
+        width: 90%;
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+        h2 {
+            // border: 2px solid yellow;
+            margin-bottom: 0.3em;
+        }
+        p {
+            // border: 2px solid blue;
+            margin-bottom: 2em;
+        }
+    }
+ 
+    // TABLET TABLET TABLET view modern art 'hero' part of the website
+    @include breakpoint-up('large') {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        .day-content-container {
+            padding-top: 2.5em;
+            padding: 2.5em 6em 0 0;
+            max-width: 40vw;
+            h2 {
+                padding-bottom: .5em;
+            }
+        }
+    }
+    // DESKTOP VIEW
+    @include breakpoint-up('xlarge') {
+        max-width: 70%vw;
+        .day-img {
+            max-width: 60vw;
+            max-height: 520px;
+            object-fit: cover;
+        }
+
+    }
+}
+.come-container {
+    // background-color: burlywood;
+    margin-bottom: 5em;
+    .gall-one, .gall-two {
+        // border: 2px solid red;
+        width: 90%;
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+        img{
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 1em;
+        }
+    }
+    .come-content {
+        // border: 2px solid red;
+        width: 90%;
+        max-width: 520px;
+        background-color: $black;
+        color: $white;
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 3em 1.5em;
+        p {
+            margin-top: 1.5em;
+            color: $white;
+        }
+    }
+    @include breakpoint-up('large') {
+        // width: 90%;
+        // height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "gall-one gall-two"
+            "gall-one come-content";
+        .gall-one {
+            grid-area: gall-one;
+            margin-bottom: 0;
+            border: 2px solid red;
+            img {
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+        .gall-two {
+            grid-area: gall-two;
+            img {
+                height: 100%;
+            }
+        }
+        .come-content {
+            grid-area: come-content;
+        }
+    }
+
+}
+
+.footer {
+    background-color: $black;
+    padding-bottom: 2em;
+    .footer-content {
+        padding: 3em 1.5em;
+        h4 {
+            color: $white;
+            line-height: .9em;
+        }
+        p{
+            margin-top: 1.5em;
+            color: $white;
+        }
+    }
+    .socials {
+        padding-left: 1.5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2em;
+    }
+    @include breakpoint-up('large') {
+        display: flex;
+        flex-direction: row;
+        align-content: flex-start;
+        align-items: flex-start;
+        .footer-content {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-top: 1em;
+            h4 {
+                width: 30%;
+            }
+            p {
+                width: 40%;
+                padding-top: 0;
+                margin-top: 0;
+            }
+        }
+        .socials {
+            margin-top: 4em;
+            margin-right: 2em;
+        }
+    }
+    @include breakpoint-up('xlarge') {
+        .footer-content {
+            margin-left: 20%;
+        }
+        .socials {
+            margin-right: 20%;
+        }
+    }
+}
