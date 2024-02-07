@@ -177,17 +177,20 @@ p {
   }
 }
 
+.day-container {
+  width: 100%;
+  padding: 1em;
+}
 .day-container .day-img {
   display: block;
   height: 100%;
-  width: 90%;
-  max-width: 520px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2em;
 }
 .day-container .day-content-container {
-  width: 90%;
+  width: 100%;
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
@@ -203,22 +206,27 @@ p {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-start;
-    width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
   .day-container .day-content-container {
     padding-top: 2.5em;
     padding: 2.5em 6em 0 0;
-    max-width: 40vw;
+    max-width: 43vw;
+    max-height: 40vh;
   }
   .day-container .day-content-container h2 {
     padding-bottom: 0.5em;
+    margin-bottom: 0.2em;
+  }
+  .day-container .day-content-container p {
+    font-size: 0.95em;
   }
 }
 @media (min-width: 1440px) {
   .day-container {
     max-width: 70% vw;
+    padding: 3em;
   }
   .day-container .day-img {
     max-width: 60vw;
@@ -226,10 +234,14 @@ p {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .day-container .come-content {
+    max-width: 20vw;
+  }
 }
 
 .come-container {
   margin-bottom: 5em;
+  border: 2px solid green;
 }
 .come-container .gall-one, .come-container .gall-two {
   width: 90%;
