@@ -1,0 +1,99 @@
+.modern-container {
+    width: 100%;
+    margin: 0 auto 6em auto;
+    .hero-container {
+        display: block;
+        margin-bottom: 2em;
+        .hero-mobile {
+            height: 100%;
+            width: 100%;
+        }
+        .hero-tablet, .hero-desktop {
+            display: none;
+        }
+        .logo-light {
+            display: none;
+        }
+    }
+    .black-bg {
+            display: none;
+    }
+    .modern-content {
+        margin-left: 1em;
+        margin-right: 1em;   
+        .logo-dark {
+            margin-bottom: 2em;
+            img {
+            width: 80%;
+            }
+        }
+        p {
+            margin-bottom: 1em;
+        }
+    }
+    /* TABLET TABLET TABLET view modern art 'hero' part of the website */
+    @include breakpoint-up('large') {
+        .hero-container {
+            max-width: 60%;
+            .hero-mobile, .hero-desktop {
+                display: none;
+            }
+            .hero-tablet {
+                display: block;
+                position: relative;
+            }
+        }
+        .modern-content {
+            position: absolute;
+            top: 10em;
+            left: 23.5em;
+            width: 400px;
+            .logo-dark {
+                margin-bottom: 2.5em;
+            }
+            p {
+                margin-bottom: 2.5em;
+            }
+        }
+    }
+    /* STICK THE CONTENT TO THE HERE IMG??????
+    DESKTOP DESKTOP DESKTOP view modert art 'hero'part of the website using grid  */
+    @include breakpoint-up('xlarge') {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            'black-bg hero-container';
+        position: relative;
+        .hero-container{
+            position: relative;
+            .hero-tablet {
+                display: none;
+            }
+            .hero-desktop {
+                display: block;
+            }
+            .logo-light {
+                display: block;
+                position: absolute;
+                top: 12em;
+                width: 400px;
+                left: -13.8em;
+                z-index: 100;
+            }
+            .modern-content {
+                position: absolute;
+                top: 12em;
+                left: 30em;
+                .logo-dark {
+                    display: none;
+                }
+            }
+        }
+            .black-bg {
+                display: block;
+                height: 800px;
+                background-color: $black;            
+            }
+    }
+}
