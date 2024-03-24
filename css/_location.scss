@@ -1,0 +1,112 @@
+.map__container {
+    // position: relative;
+    background-color: yellow;
+    padding: 0;
+    width: 100%;
+    display: block;
+    // height: 100%;
+    .button-back__wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .arrow-back-container {
+        width: 30%;
+        background-color: $orange;
+        background-image: url(../assets/icon-arrow-left.svg);
+        background-repeat: no-repeat;
+        background-size: .4em;
+        background-position: center;
+
+    }
+    .button-back-text {
+        width: 100%;
+        height: 72px;
+        background-color: $black;
+        color: $white;
+        font-size: 1.7em;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 2px;
+        padding-top: .7em;
+        padding-left: .7em;
+        align-items: center;
+    }
+    .map {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+
+
+        &__mobile {
+            display: block;
+            @include breakpoint-up('medium') {
+                display: none;
+            }
+        }
+        &__tablet {
+            display: none;
+            @include breakpoint-up('medium') {
+                display: block;
+            }
+            @include breakpoint-up('large') {
+                display: none;
+            }
+        }
+        &__desktop {
+            display: none;
+            @include breakpoint-up('large') {
+                display: block;
+            }
+        }
+    }
+
+}
+.location__container {
+    background-color: $black;
+    color: $white;
+    padding-top: 1.5em;
+    padding-left: .8em;
+    padding-bottom: 1.8em;
+    padding-right: .8em;
+    h2 {
+        color: $orange;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        font-weight: 900;
+        margin-bottom: .8em;
+    }
+    h1 {
+        text-transform: uppercase;
+        font-weight: 1000;
+        margin-bottom: 1em;
+    }
+    .address {
+        margin-bottom: .5em;
+    }
+    p {
+        color: $white;
+        line-height: 1.5em;
+    }
+}
+.descr__container {
+    background-color: $orange;
+    padding-top: 1.5em;
+    padding-left: .8em;
+    padding-right: .8em;
+    padding-top: 2em;
+    h3 {
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 1.8em;
+    }
+    .descr__socials {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        padding-bottom: 2em;
+        margin-top: 1.8em;
+    }
+
+}
+
