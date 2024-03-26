@@ -252,18 +252,31 @@ p {
 }
 .main__wrapper .grid__content h2 {
   margin-bottom: 0.2em;
-  margin-top: 0.5em;
 }
 .main__wrapper .content2 {
+  grid-area: content-come;
   background-color: #151515;
   color: white;
   margin-right: 1em;
+  margin-left: 1em;
 }
 .main__wrapper .content2 h2 {
-  margin-top: 2em;
+  margin-top: 0.8em;
 }
 .main__wrapper .content2 p {
   color: white;
+  padding-bottom: 2em;
+}
+@media (min-width: 768px) {
+  .main__wrapper .content2 {
+    margin-left: 0;
+    padding-top: 1em;
+  }
+}
+@media (min-width: 1440px) {
+  .main__wrapper .content2 h2 {
+    width: 50%;
+  }
 }
 .main__wrapper .image1 {
   grid-area: image-one;
@@ -276,6 +289,20 @@ p {
 .main__wrapper .content1 {
   grid-area: content-day;
 }
+@media (min-width: 768px) {
+  .main__wrapper .content1 {
+    margin-top: 1em;
+    padding-top: 1em;
+  }
+}
+@media (min-width: 1440px) {
+  .main__wrapper .content1 h2 {
+    width: 50%;
+  }
+  .main__wrapper .content1 p {
+    width: 60%;
+  }
+}
 .main__wrapper .image2 {
   grid-area: image-two;
 }
@@ -286,9 +313,6 @@ p {
   .main__wrapper .image3 {
     padding-right: 1em;
   }
-}
-.main__wrapper .content2 {
-  grid-area: content-come;
 }
 
 .footer {
@@ -389,12 +413,12 @@ p {
   height: 72px;
   background-color: #151515;
   color: white;
-  font-size: 1.7em;
+  font-size: 1.5em;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 2px;
-  padding-top: 0.7em;
-  padding-left: 0.7em;
+  padding-top: 0.9em;
+  padding-left: 1em;
   align-items: center;
 }
 .location-site .map__container .maps {

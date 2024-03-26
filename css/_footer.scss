@@ -46,14 +46,8 @@
         }
     }
     @include breakpoint-up('xlarge') {
-        // flex-direction: row;
-        // justify-content: space-around;
-        // align-content: flex-start;
-        // align-items: flex-start;
         padding-left: 5em;
         padding-right: 5em;
         border: 1px solid yellow;
-
-
     }
 }
