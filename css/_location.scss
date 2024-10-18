@@ -118,6 +118,7 @@
         .location__content {
             @include breakpoint-up('xlarge') {
                 width: 40%;
+                margin-left: 5em;
             }
             h2 {
                 color: $orange;
@@ -150,9 +151,10 @@
             padding-right: 2em;
         }
         .descr__header {
-            @include breakpoint-up('large') {
-                width: 10em;
-            }
+            width: 15em;
+            // @include breakpoint-up('large') {
+            //     width: 14em;
+            // }
             @include breakpoint-up('xlarge'){
                 width: 15em;
                 margin-left: 4em;
@@ -189,6 +191,8 @@
             margin-top: 1.8em;
             @include breakpoint-up('large') {
                 padding-right: 2em;
+                margin-top: 0.5em;
+                border: 2px solid red;
             }
         }   
     }

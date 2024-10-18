@@ -514,6 +514,7 @@ p {
 @media (min-width: 1440px) {
   .location-site .location__container .location__content {
     width: 40%;
+    margin-left: 5em;
   }
 }
 .location-site .location__container .location__content h2 {
@@ -547,10 +548,8 @@ p {
     padding-right: 2em;
   }
 }
-@media (min-width: 768px) {
-  .location-site .descr__container .descr__header {
-    width: 10em;
-  }
+.location-site .descr__container .descr__header {
+  width: 15em;
 }
 @media (min-width: 1440px) {
   .location-site .descr__container .descr__header {
@@ -597,5 +596,7 @@ p {
 @media (min-width: 768px) {
   .location-site .descr__container .descr__socials {
     padding-right: 2em;
+    margin-top: 0.5em;
+    border: 2px solid red;
   }
 }/*# sourceMappingURL=style.css.map */
